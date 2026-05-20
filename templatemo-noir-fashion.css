@@ -167,8 +167,8 @@ textarea {
 .nav-menu {
     counter-reset: navItem;
     position: fixed;
-    top: 50%;
-    right: 0;
+    top: 28px;
+    right: 48px;
     z-index: 90;
     width: 285px;
     padding: 18px 18px 18px 20px;
@@ -177,15 +177,10 @@ textarea {
     border: 0;
     box-shadow: none;
     backdrop-filter: none;
-    transform: translate(230px, -50%);
+    transform: none;
     opacity: 1;
     pointer-events: auto;
-    transition: transform 0.35s ease;
-}
-
-.nav-menu:hover,
-.nav-menu:focus-within {
-    transform: translate(0, -50%);
+    transition: none;
 }
 
 .nav-menu::before {
@@ -197,9 +192,9 @@ textarea {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 24px;
     min-height: 50px;
-    padding: 0 0 0 72px;
+    padding: 0 0 0 78px;
     color: rgba(255, 255, 255, 0.78);
     font-size: 1rem;
     font-weight: 800;
@@ -212,7 +207,7 @@ textarea {
 .nav-menu > a::before {
     content: "";
     position: absolute;
-    left: 16px;
+    left: 12px;
     top: 50%;
     width: 9px;
     height: 9px;
@@ -226,12 +221,12 @@ textarea {
 .nav-menu > a::after {
     content: counter(navItem, decimal-leading-zero);
     position: absolute;
-    left: 92px;
+    left: 76px;
     color: rgba(255, 255, 255, 0.36);
     font-size: 0.88rem;
     font-weight: 500;
     letter-spacing: 0.08em;
-    transform: translateX(-62px);
+    transform: translateX(-44px);
     transition: color 0.25s ease;
 }
 
@@ -265,6 +260,7 @@ textarea {
 }
 
 .page-home-link {
+    display: none;
     position: absolute;
     top: 18px;
     right: 34px;
@@ -284,6 +280,48 @@ textarea {
     letter-spacing: 0.16em;
     text-transform: uppercase;
     box-shadow: 0 18px 42px rgba(193, 255, 114, 0.22);
+}
+
+.image-side-menu {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    z-index: 95;
+    width: clamp(20px, 2.5vw, 31px);
+    aspect-ratio: 157 / 1078;
+}
+
+.image-side-menu img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.menu-hit {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.menu-hit-home {
+    top: 21%;
+    height: 17%;
+}
+
+.menu-hit-about {
+    top: 40%;
+    height: 18%;
+}
+
+.menu-hit-services {
+    top: 60%;
+    height: 18%;
+}
+
+.menu-hit-portfolio {
+    top: 80%;
+    height: 18%;
 }
 
 .ghost-link,
@@ -602,6 +640,17 @@ textarea {
     object-fit: contain;
 }
 
+.home-image-slot picture,
+.why-image-slot picture,
+.services-image-slot picture,
+.sobre-content-slot picture,
+.sobre-image-band picture,
+.portfolio-image-map picture,
+.image-footer picture {
+    display: block;
+    width: 100%;
+}
+
 .why-image-slot {
     min-height: clamp(460px, 64vh, 760px);
     display: flex;
@@ -832,7 +881,7 @@ textarea {
     display: flex;
     align-items: flex-end;
     overflow: hidden;
-    background-image: url("assets/imagens/sobre.png");
+    background-image: url("assets/imagens/sobre-hero.webp");
     background-size: cover;
     background-position: center;
 }
@@ -963,6 +1012,13 @@ textarea {
 }
 
 .sobre-image-band > img {
+    display: block;
+    width: 100%;
+    height: clamp(360px, 42vw, 640px);
+    object-fit: cover;
+}
+
+.sobre-image-band picture > img {
     display: block;
     width: 100%;
     height: clamp(360px, 42vw, 640px);
@@ -1904,8 +1960,8 @@ blockquote {
     }
 
     .brand {
-        font-size: 1.55rem;
-        max-width: calc(100vw - 100px);
+        font-size: 1.65rem;
+        max-width: calc(100vw - 86px);
         white-space: nowrap;
     }
 
@@ -2101,6 +2157,44 @@ blockquote {
         padding: 70px 0;
     }
 
+    .home-stats,
+    .home-services,
+    .home-why {
+        min-height: auto;
+    }
+
+    .home-image-slot,
+    .services-image-slot,
+    .why-image-slot,
+    .sobre-content-slot {
+        min-height: auto;
+        display: block;
+    }
+
+    .home-image-slot img,
+    .services-image-slot img,
+    .why-image-slot img,
+    .sobre-content-slot img,
+    .portfolio-image-section img,
+    .image-footer img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .portfolio-image-section {
+        padding-top: 104px;
+    }
+
+    .portfolio-image-map {
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .portfolio-hotspot {
+        top: 34%;
+        height: 60%;
+    }
+
     .section-label {
         gap: 14px;
         flex-wrap: wrap;
@@ -2182,16 +2276,11 @@ blockquote {
     }
 
     .nav-menu {
-        right: 0;
-        top: 50%;
+        right: 14px;
+        top: 74px;
         width: 210px;
         padding: 14px 12px 14px 14px;
-        transform: translate(164px, -50%);
-    }
-
-    .nav-menu:hover,
-    .nav-menu:focus-within {
-        transform: translate(0, -50%);
+        transform: none;
     }
 
     .page-home-link {
@@ -2203,6 +2292,12 @@ blockquote {
         min-height: 40px;
         padding: 0 16px;
         font-size: 0.82rem;
+    }
+
+    .image-side-menu {
+        top: 10px;
+        right: 10px;
+        width: 28px;
     }
 
     .nav-menu > a {
@@ -2227,23 +2322,24 @@ blockquote {
     }
 
     .whatsapp-widget {
-        right: 16px;
-        bottom: 86px;
+        right: 10px;
+        bottom: 24px;
     }
 
     .whatsapp {
-        width: 132px;
-        height: 132px;
+        width: 92px;
+        height: 92px;
     }
 
     .whatsapp img {
-        width: 168px;
-        height: 168px;
+        width: 116px;
+        height: 116px;
     }
 
     .whatsapp-panel {
         right: 0;
-        bottom: 118px;
+        bottom: 88px;
+        width: min(320px, calc(100vw - 22px));
         padding: 18px 14px 14px;
     }
 }
@@ -2264,9 +2360,35 @@ blockquote {
         width: min(100% - 22px, 1680px);
     }
 
+    .site-header {
+        padding-top: 10px;
+    }
+
+    .brand {
+        font-size: 1.32rem;
+        max-width: calc(100vw - 64px);
+    }
+
     .hero h1 {
         font-size: 2.75rem;
         line-height: 1;
+    }
+
+    .hero-content {
+        padding-bottom: 38px;
+    }
+
+    .hero-logo-model {
+        width: 86px;
+    }
+
+    .hero-kicker {
+        font-size: 0.92rem;
+    }
+
+    .image-side-menu {
+        width: 24px;
+        right: 8px;
     }
 
     .sobre-title-row h2 {
@@ -2318,6 +2440,31 @@ blockquote {
         padding: 56px 0;
     }
 
+    .home-stats,
+    .home-services,
+    .home-why,
+    .sobre-content,
+    .portfolio-image-section {
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+
+    .sobre-hero {
+        margin-top: 58px;
+    }
+
+    .sobre-image-band > img {
+        height: auto;
+    }
+
+    .sobre-marquee {
+        padding: 14px 0;
+    }
+
+    .sobre-marquee span {
+        font-size: 0.95rem;
+    }
+
     .service-card h3,
     .service-card p {
         padding-inline: 18px;
@@ -2344,6 +2491,22 @@ blockquote {
     .portfolio-photo-slot {
         min-height: 180px;
     }
+
+    .portfolio-theme {
+        padding-top: 96px;
+    }
+
+    .portfolio-theme-head {
+        margin-bottom: 28px;
+    }
+
+    .portfolio-theme-head h1 {
+        font-size: 2.15rem;
+    }
+
+    .portfolio-theme-head p {
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 360px) {
@@ -2368,9 +2531,13 @@ blockquote {
         display: none;
     }
 
-    .whatsapp,
-    .top-button {
-        width: 46px;
-        height: 46px;
+    .whatsapp {
+        width: 82px;
+        height: 82px;
+    }
+
+    .whatsapp img {
+        width: 104px;
+        height: 104px;
     }
 }

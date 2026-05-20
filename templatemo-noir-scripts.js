@@ -1,13 +1,11 @@
 const header = document.getElementById("siteHeader");
 const menuButton = document.getElementById("menuButton");
 const navMenu = document.getElementById("navMenu");
-const topButton = document.getElementById("topButton");
 const whatsappWidget = document.getElementById("whatsappWidget");
 const whatsappToggle = document.getElementById("whatsappToggle");
 
 function handleScroll() {
     if (header) header.classList.toggle("scrolled", window.scrollY > 80);
-    if (topButton) topButton.classList.toggle("visible", window.scrollY > 500);
 }
 
 window.addEventListener("scroll", handleScroll);
@@ -30,12 +28,6 @@ document.querySelectorAll("a[href^='#']").forEach((link) => {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 });
-
-if (topButton) {
-    topButton.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-}
 
 if (whatsappWidget && whatsappToggle) {
     whatsappToggle.addEventListener("click", (event) => {

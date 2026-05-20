@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Webforge</title>
+        <link rel="icon" href="assets/imagens/icon.ico" type="image/x-icon">
+<title>Portfolio | Webforge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="templatemo-noir-fashion.css">
 </head>
 <body>
@@ -14,25 +15,36 @@
         <div class="container header-inner">
             <a href="index.html" class="brand">Webforge<span>.</span></a>
             <button class="menu-button" id="menuButton" aria-label="Abrir menu"><span></span><span></span><span></span></button>
-            <nav class="page-home-link" id="navMenu"><a href="index.html">Início</a></nav>
+            <nav class="page-home-link" id="navMenu"><a href="index.html">InÃ­cio</a></nav>
         </div>
     </header>
 
-    <main class="page-main">
+    
+    <nav class="image-side-menu" aria-label="Menu principal">
+        <img src="assets/imagens/barramenu.png" alt="Menu Webforge">
+        <a class="menu-hit menu-hit-home" href="index.html" aria-label="Início"></a>
+        <a class="menu-hit menu-hit-about" href="sobre.html" aria-label="Sobre"></a>
+        <a class="menu-hit menu-hit-services" href="servicos.html" aria-label="Serviços"></a>
+        <a class="menu-hit menu-hit-portfolio" href="portfolio.html" aria-label="Portfólio"></a>
+    </nav>
+<main class="page-main">
         <section class="section portfolio-image-section">
             <div class="container">
                 <div class="portfolio-image-map">
-                    <img src="assets/imagens/portfolio-gerado.png" alt="Portfolio Webforge com projetos de advocacia, mudanças, petshop e orçamentos">
+                    <picture>
+                        <source media="(max-width: 760px)" srcset="assets/imagens/portfolio-gerado-mobile.webp">
+                        <img src="assets/imagens/portfolio-gerado.webp" alt="Portfolio Webforge com projetos de advocacia, mudanças, petshop e orçamentos">
+                    </picture>
                     <a class="portfolio-hotspot hotspot-advocacia" href="portfolio-advocacia.html" target="_blank" rel="noreferrer" aria-label="Abrir portfolio de advocacia"></a>
-                    <a class="portfolio-hotspot hotspot-mudancas" href="portfolio-mudancas.html" target="_blank" rel="noreferrer" aria-label="Abrir portfolio de mudanças"></a>
+                    <a class="portfolio-hotspot hotspot-mudancas" href="portfolio-mudancas.html" target="_blank" rel="noreferrer" aria-label="Abrir portfolio de mudanÃ§as"></a>
                     <a class="portfolio-hotspot hotspot-petshop" href="portfolio-petshop.html" target="_blank" rel="noreferrer" aria-label="Abrir portfolio de petshop"></a>
-                    <a class="portfolio-hotspot hotspot-orcamentos" href="portfolio-orcamentos.html" target="_blank" rel="noreferrer" aria-label="Abrir portfolio de orçamentos"></a>
+                    <a class="portfolio-hotspot hotspot-orcamentos" href="portfolio-orcamentos.html" target="_blank" rel="noreferrer" aria-label="Abrir portfolio de orÃ§amentos"></a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer image-footer"><a href="https://wa.me/5538999790464?text=Ol%C3%A1%2C%20vim%20pelo%20site%20Webforge%20e%20quero%20construir%20algo%20incr%C3%ADvel%20juntos." target="_blank" rel="noreferrer" aria-label="Chamar no WhatsApp"><img src="assets/imagens/rodape.png" alt="Webforge rodapé"></a></footer>
+    <footer class="footer image-footer"><a href="https://wa.me/553899951478text=Ol%C3%A1%2C%20vim%20pelo%20site%20Webforge%20e%20quero%20construir%20algo%20incr%C3%ADvel%20juntos." target="_blank" rel="noreferrer" aria-label="Chamar no WhatsApp"><picture><source media="(max-width: 760px)" srcset="assets/imagens/rodape-mobile.webp"><img src="assets/imagens/rodape.webp" alt="Webforge rodapÃ©"></picture></a></footer>
     <script src="templatemo-noir-scripts.js"></script>
 </body>
 </html>

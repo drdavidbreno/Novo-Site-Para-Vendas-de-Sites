@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webforge</title>
+        <link rel="icon" href="assets/imagens/icon.ico" type="image/x-icon">
+<title>Webforge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="templatemo-noir-fashion.css">
 </head>
 <body>
@@ -19,15 +20,23 @@
         </div>
     </header>
 
-    <div class="whatsapp-widget" id="whatsappWidget">
+    
+    <nav class="image-side-menu" aria-label="Menu principal">
+        <img src="assets/imagens/barramenu.png" alt="Menu Webforge">
+        <a class="menu-hit menu-hit-home" href="index.html" aria-label="Início"></a>
+        <a class="menu-hit menu-hit-about" href="sobre.html" aria-label="Sobre"></a>
+        <a class="menu-hit menu-hit-services" href="servicos.html" aria-label="Serviços"></a>
+        <a class="menu-hit menu-hit-portfolio" href="portfolio.html" aria-label="Portfólio"></a>
+    </nav>
+<div class="whatsapp-widget" id="whatsappWidget">
     <div class="whatsapp-panel" id="whatsappPanel" aria-label="Opções de atendimento">
-        <h2>Como posso ajudar?</h2>
-        <a href="https://wa.me/5538999790464?text=Ol%C3%A1%2C%20vim%20pelo%20site%20Webforge%20e%20quero%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noreferrer">Quero orçamento</a>
-        <a href="https://wa.me/5538999790464?text=Ol%C3%A1%2C%20vim%20pelo%20site%20Webforge%20e%20quero%20ver%20os%20tipos%20de%20site%20dispon%C3%ADveis." target="_blank" rel="noreferrer">Ver tipos de site</a>
-        <a href="https://wa.me/5538999790464?text=Ol%C3%A1%2C%20vim%20pelo%20site%20Webforge%20e%20quero%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noreferrer">Tirar uma dúvida</a>
+        <h2>Como posso ajudar</h2>
+        <a href="https://wa.me/553899951478text=Ol%C3%A1%2C%20vim%20pelo%20site%20Webforge%20e%20quero%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noreferrer">Quero orçamento</a>
+        <a href="https://wa.me/553899951478text=Ol%C3%A1%2C%20vim%20pelo%20site%20Webforge%20e%20quero%20ver%20os%20tipos%20de%20site%20dispon%C3%ADveis." target="_blank" rel="noreferrer">Ver tipos de site</a>
+        <a href="https://wa.me/553899951478text=Ol%C3%A1%2C%20vim%20pelo%20site%20Webforge%20e%20quero%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noreferrer">Tirar uma dúvida</a>
     </div>
     <a class="whatsapp" href="#" id="whatsappToggle" aria-label="Abrir opções de atendimento" aria-expanded="false" aria-controls="whatsappPanel">
-        <img src="images/whatsapp-bonequinho.webp?v=2" alt="">
+        <img src="images/whatsapp-bonequinho.webp" alt="">
     </a>
     </div>
 
@@ -35,12 +44,6 @@
         <section class="hero" id="inicio">
             <div class="hero-photo" role="img" aria-label="Profissional trabalhando no notebook"></div>
             <div class="hero-shade"></div>
-            <nav class="nav-menu" id="navMenu">
-                <a href="index.html" aria-current="page">Início</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="servicos.html">Serviços</a>
-                <a href="portfolio.html">Portfolio</a>
-            </nav>
             <div class="container hero-content reveal">
                 <div class="hero-intro">
                     <img class="hero-logo-model" src="images/logo-rosa.webp" alt="Logo Webforge">
@@ -52,7 +55,7 @@
                     <h1>Webforge</h1>
                 </div>
                 <div class="hero-actions">
-                    <a href="https://wa.me/5538999790464?text=Ol%C3%A1%2C%20vim%20pelo%20site%20Webforge%20e%20quero%20meu%20site." target="_blank" rel="noreferrer" class="motion-btn"><span>Quero meu site</span><i>↗</i></a>
+                    <a href="https://wa.me/553899951478text=Ol%C3%A1%2C%20vim%20pelo%20site%20Webforge%20e%20quero%20meu%20site." target="_blank" rel="noreferrer" class="motion-btn"><span>Quero meu site</span><i>↗</i></a>
                     <a href="servicos.html" class="hero-link">Ver serviços</a>
                 </div>
             </div>
@@ -61,7 +64,10 @@
         <section class="section stats home-stats">
             <div class="container">
                 <div class="home-image-slot">
-                    <img src="assets/imagens/nossosnumeros.png" alt="Nossos números">
+                    <picture>
+                        <source media="(max-width: 760px)" srcset="assets/imagens/nossosnumeros-mobile.webp">
+                        <img src="assets/imagens/nossosnumeros.webp" alt="Nossos números">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -69,7 +75,10 @@
         <section class="section services home-services">
             <div class="container">
                 <div class="services-image-slot">
-                    <img src="assets/imagens/serviços3.png" alt="Serviços">
+                    <picture>
+                        <source media="(max-width: 760px)" srcset="assets/imagens/servicos3-mobile.webp">
+                        <img src="assets/imagens/servicos3.webp" alt="Serviços">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -77,15 +86,16 @@
         <section class="section why home-why">
             <div class="container">
                 <div class="why-image-slot">
-                    <img src="assets/imagens/sobrenos4.png" alt="Sobre nós">
+                    <picture>
+                        <source media="(max-width: 760px)" srcset="assets/imagens/sobrenos4-mobile.webp">
+                        <img src="assets/imagens/sobrenos4.webp" alt="Sobre nós">
+                    </picture>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer image-footer"><a href="https://wa.me/5538999790464?text=Ol%C3%A1%2C%20vim%20pelo%20site%20Webforge%20e%20quero%20construir%20algo%20incr%C3%ADvel%20juntos." target="_blank" rel="noreferrer" aria-label="Chamar no WhatsApp"><img src="assets/imagens/rodape.png" alt="Webforge rodapé"></a></footer>
-
-    <button class="top-button" id="topButton" aria-label="Voltar ao topo">↑</button>
+    <footer class="footer image-footer"><a href="https://wa.me/553899951478text=Ol%C3%A1%2C%20vim%20pelo%20site%20Webforge%20e%20quero%20construir%20algo%20incr%C3%ADvel%20juntos." target="_blank" rel="noreferrer" aria-label="Chamar no WhatsApp"><picture><source media="(max-width: 760px)" srcset="assets/imagens/rodape-mobile.webp"><img src="assets/imagens/rodape.webp" alt="Webforge rodapé"></picture></a></footer>
     <script src="templatemo-noir-scripts.js"></script>
 </body>
 </html>
