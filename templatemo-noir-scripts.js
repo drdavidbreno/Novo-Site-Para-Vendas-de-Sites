@@ -7,7 +7,6 @@ const whatsappToggle = document.getElementById("whatsappToggle");
 
 function handleScroll() {
     if (header) header.classList.toggle("scrolled", window.scrollY > 80);
-    document.body.classList.toggle("home-nav-hidden", window.scrollY > 30);
     if (topButton) topButton.classList.toggle("visible", window.scrollY > 500);
 }
 
